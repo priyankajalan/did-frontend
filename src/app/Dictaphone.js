@@ -20,12 +20,12 @@ class Dictaphone extends Component {
     .set('accept', 'json')
     .end((err, res) => {
       const { data } = res.text && JSON.parse(res.text);
-      this.setState({ answers:data });
+      this.setState({ answers: data });
     });
   }
 
 
-  render() {
+  render = () => {
     const { transcript, resetTranscript, browserSupportsSpeechRecognition } = this.props
 
     if (!browserSupportsSpeechRecognition) {
@@ -58,12 +58,12 @@ class Dictaphone extends Component {
         <Button  variant="raised" color="primary" onClick={this.sendNow(transcript)}>Send</Button>
         <Speech 
           styles={style} 
-          autostart={false} text="Welcome to react speech"
+          autostart={false} text={this.state.answers}
           pitch="0.5"
           rate="0.5"
           volume="0.1"
           lang="en-GB"
-          voice="Daniel"
+          voice="Google UK English Female"
         />
       </div>
     )
