@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Dictaphone from './Dictaphone';
+// import Dictaphone from './Dictaphone';
+import Script from './Script';
 
 const MainApp = document.getElementById('app');
 
-
 ReactDOM.render(
         <div>
-            <Dictaphone />
+            <Script />
         </div>,
     MainApp
 );
