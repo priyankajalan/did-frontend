@@ -31,6 +31,7 @@ const config = {
             {
                 test: /\.js?/, 
                 include: SRC_DIR, 
+                exclude: /node_modules\/(?!react-voice-components)/,
                 loader: 'babel-loader', 
                 query: { 
                     presets: ['react','es2015','stage-2'],
